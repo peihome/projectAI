@@ -1,0 +1,373 @@
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Set a max width for the container and center it */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Style the header */
+header {
+    color: #000 !important;
+    padding: 20px 0;
+    text-align: left; /* Align header content to the left */
+    flex: 1; /* Take remaining space */
+    position: fixed;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #1E4912;
+}
+
+header a {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #2ecc71 !important;
+}
+
+header nav {
+    text-align: right; /* Align navigation to the right */
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li:first-child {
+    margin-left: 0; /* Remove margin for the first navigation link */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the main content */
+section {
+    height: 100%;
+}
+
+.dN {
+    display: none;
+}
+
+.mainContainer h2{
+    color: #000 !important;
+}
+
+.pB1 {
+    padding-bottom: 1em;
+}
+
+.mainContainer {
+    grid-template-columns: 0.5fr 1fr;
+    align-items: baseline;
+    grid-gap: 1em;
+}
+
+.mainContainer img {
+    height: 90%;
+}
+
+.topicContainer a {
+    color: #198715;
+    font-weight: 600;
+    margin-right: 0.5em;
+}
+
+.topicContainer {
+    grid-template-columns: unset;
+}
+
+section img{
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2ecc71; /* Green color */
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style the contact form */
+.contact-form {
+    margin-bottom: 40px;
+}
+
+.contact-form form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #2ecc71; /* Green color */
+}
+
+.contact-form form input[type="submit"] {
+    background-color: #2ecc71; /* Green color */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-form form input[type="submit"]:hover {
+    background-color: #27ae60; /* Darker green on hover */
+}
+
+.gap1em {
+    gap: 1em;
+}
+
+.span2 {
+    grid-column: span 2;
+    margin-top: 1em;
+    font-size: 2em;
+}
+
+/* Style the map */
+.map {
+    margin-bottom: 40px;
+    height: 100%; /* Adjust height as needed */
+}
+
+.aSB {
+    align-self: baseline;
+}
+
+.aSB h2{
+    padding-bottom: 1em;
+}
+
+#contact{
+    margin-bottom: 1em;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Style the footer */
+footer {
+    background-color: #1E4912; /* Green color */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer * {
+    color: #FFFFFF !important;
+}
+
+.footerContainer {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.removecolumngrid {
+    grid-template-columns: unset;
+}
+
+.pT10em{
+    padding-top: 10em;
+}
+
+.imageunset {
+    height: unset !important;
+}
+
+#about {
+    margin-top: 3em;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+.container h1{
+    color: #198715;
+}
+
+.pT5em{
+    padding-top: 5em;
+}
+
+.copywrightContainer {
+    grid-template-columns: 1fr;
+    padding-top: 2em;
+}
+
+li {
+    list-style-type: none;
+    padding: 1em;
+}
+
+.social-icons img {
+    width: 1.7em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-section{
+    display: grid;
+    align-self: baseline;
+}
+
+.servicesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.servicesContainer h2 {
+    margin-bottom: 1em;
+}
+
+#about > img {
+    object-position: top;
+}
+
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 850px) {
+    header .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    header nav {
+        text-align: center;
+        padding-top: 1.5em;
+    }
+
+    .mainContainer img, .topicContainer{
+        grid-column: span 2;
+    }
+
+    .mainContainer{
+        padding-top: 1em;
+    }
+
+    #about, #services {
+        padding-top: 2em;
+    }
+
+    .mainImg{
+        display: none;
+    }
+
+    #services > img{
+        display: none;
+    }
+
+}
+
+/* Media queries for even smaller screens */
+@media only screen and (max-width: 600px) {
+    header {
+        position: absolute;
+    }
+    
+    header li {
+        padding: 0.4em;
+    }
+
+    .mainContainer{
+        padding-top: 8em;
+    }
+
+    .container ul {
+        display: grid;
+    }
+
+    .secondSection{
+        display: none;
+    }
+
+    .footerContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .thirdSection span {
+        display: none;
+    }
+
+    .social-icons{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #contact img {
+        display: none;
+    }
+
+    #contact {
+        grid-template-columns: 1fr;
+        padding-top: 7em;
+    }
+
+    #contact div, #services div, #services img {
+        grid-column: span 2;
+    }
+
+    #services > img {
+        display: none;
+    }
+
+    #about, #services {
+        padding-top: 9em;
+    }
+
+    section img {
+        height: auto;
+    }
+
+    .gridRow3{
+        grid-row: 3;
+    }
+
+    #about > img {
+        height: 17em;
+    }
+}
